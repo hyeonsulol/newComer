@@ -14,9 +14,25 @@
 	<name>KyeongGigroup</name>
 	<description>Demo project for Spring Boot</description>
 
+	
 	<properties>
 		<java.version>1.8</java.version>
+		  <!-- JSP, WEB 버전 -->
+        <jsp.version>2.2</jsp.version>
+        <jstl.version>1.2</jstl.version>
+        <servlet.version>3.0.1</servlet.version>
+        <!-- 로그 버전 -->
+        <logback.version>1.1.1</logback.version>
+        <slf4j.version>1.7.6</slf4j.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+		 <!-- 프로젝트 코드 인코딩 설정 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- JPA, 하이버네이트 버전 -->
+        <hibernate.version>4.3.10.Final</hibernate.version>
+        <!-- 데이터베이스 버전 -->
+        <tomcat-jdbc.version>7.0.57</tomcat-jdbc.version>
+        <h2db.version>1.4.187</h2db.version>
 	</properties>
 
 	<dependencies>
@@ -24,13 +40,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.6.2</version>
-			<scope>test</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -64,6 +74,21 @@
             <version>${spring-framework.version}</version>
         </dependency>
 		
+		 <!-- 스프링 ORM  스프링프레임워크와 jpa를 연동하기 위한 라이브러리 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring-framework.version}</version>
+        </dependency>
+		
+		  <!-- JPA, 하이버네이트 jpa 표준과 하이버네이트를 포함하는 라이브러리 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+		
+		
 		<!-- 롬복 -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -81,6 +106,19 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- 로깅 SLF4J & LogBack -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>runtime</scope>
+        </dependency>
 		
 		  <!-- WEB -->
         <dependency>
