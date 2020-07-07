@@ -7,7 +7,7 @@
     <mvc:annotation-driven/><!-- 스프링 mvc기능을 활성화 한다.  -->
     <!--<context:annotation-config />-->
 
-    <context:component-scan base-package="KyeongGigroup.web"/><!-- @component @service @repository @controller 어노테이션이 붙어있는 클래스들을 스프링 빈으로 등록한다. -->
+    <context:component-scan base-package="KyeongGiGroup.web"/><!-- @component @service @repository @controller 어노테이션이 붙어있는 클래스들을 스프링 빈으로 등록한다. -->
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
